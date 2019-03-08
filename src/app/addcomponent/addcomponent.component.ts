@@ -8,26 +8,41 @@ import {FirstserviceService} from '../firstservice.service'
 })
 export class AddcomponentComponent implements OnInit {
 
-  constructor(private myservice: FirstserviceService) { }
-  json =
-    {
-      FirstName: "",
-      LastName: "",
-      Email: "",
-      Id: "",
-      PhoneNumber: "",
-      Designation: "",
-      DOB: ""
+  json:any;
 
-    }
+  firstName:string;
+  lastName:string;
+  email:string;
+  id:number;
+  phoneNumber:number;
+  designation:string
+  dob:any;
+
+  constructor(private myservice: FirstserviceService) { }
+  
     value;
 
   ngOnInit() {
   }
 add()
-{
+{ 
+  this.json =
+    {
+      "FirstName":this.firstName ,
+      "LastName": this.lastName,
+      "Email": this.email,
+      "Id": this.id,
+      "PhoneNumber": this.phoneNumber,
+      "Designation": this.designation,
+      "DOB": this.dob
+
+    }
+
 this.value=this.myservice.getdata();
 this.value.push(this.json);
+console.log(this.value);
+
+
 console.log(this.value);
 
 
