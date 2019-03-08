@@ -1,0 +1,20 @@
+
+
+      <table>
+        <th *ngFor="let item of head">
+        <tr>{{item}}</tr>
+        </th>
+        <tr *ngFor="let item of value">
+        
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Id}}</td>
+        <td>{{item.PhoneNumber}}</td>
+        <td>{{item.Designation}}</td>
+        <td>{{item.DOB}}</td>
+
+        </tr>
+        </table>
+        <button (click)="getValue()">getValue</button><br>
+        
