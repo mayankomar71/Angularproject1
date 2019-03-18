@@ -13,11 +13,15 @@ export class MycomponentComponent implements OnInit {
   value: string;
   name: string;
 
-head;
-  getValue(){
+heads;
+   getValue(){
     this.value = this.myservice.getdata();
-    this.head = Object.keys(this.value[1]);
+    this.heads = Object.keys(this.value[1]);
 
+    }
+    sorts(head)
+    {
+      this.myservice.sort(head);
     }
 
 
